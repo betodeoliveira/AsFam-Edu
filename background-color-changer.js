@@ -21,24 +21,21 @@ $(".background-trigger").each(function (index) {
             // console.log("change color to: " + $(this).css("color"));
             $(".page-background").css("background-color", $(this).css("background-color"));
             if($(this).children().length > 0) {
-                $(".set-light-mode").click();
+                // Set light mode?
             }
         }
     });
 });
 
-// To prevent triggers at wrong positions recalculate when page is ready
-$(document).ready(function () {
-    setTimeout(function(){
+let resizeTimeoutId;
+
+const resizeObserver = new ResizeObserver(entries => {
+    // console.log('Body height changed');
+    clearTimeout(resizeTimeoutId);
+    resizeTimeoutId = setTimeout(() => {
         ScrollTrigger.refresh();
-    }, 2000);
+    }, 200);
 });
 
-// Check the animation time and put a little bit more on timeout
-$(".values-item_expand-btn").on( "click", function() {
-    ScrollTrigger.disable();
-    setTimeout(function(){
-        ScrollTrigger.enable();
-        ScrollTrigger.refresh();
-    }, 600);
-});
+// start observing a DOM node
+resizeObserver.observe(document.body);
