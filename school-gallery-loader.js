@@ -1,6 +1,6 @@
 let loader = gsap.timeline();
 loader
-.set(".gallery-video_item", { boxShadow: "0 0 10px 2px hsla(0, 0.00%, 100.00%, 0)" })
+.set(".gallery-video_item", { boxShadow: "none" })
 .from(".gallery_loader-img", {
     scaleX: 1.1,
     scaleY: 1.1,
@@ -15,7 +15,7 @@ loader
             stagger: { each: 0.2, from: "end" },
             ease: "power1.inOut",
             onComplete: () => {
-                $(".gallery-video_item").css("box-shadow", "0 0 10px 2px hsla(0, 0.00%, 100.00%, 0.50)")
+                $(".gallery-video_item").css("box-shadow", "0 0 20px 10px hsla(0, 0.00%, 100.00%, 0.20)")
             }
         });
     }
