@@ -16,6 +16,7 @@ loader
             ease: "power1.inOut",
             onComplete: () => {
                 $(".gallery-video_item").css("box-shadow", "0 0 20px 10px hsla(0, 0.00%, 100.00%, 0.20)")
+                $(".gallery-tooltip").css("opacity", "1");
             }
         });
     }
