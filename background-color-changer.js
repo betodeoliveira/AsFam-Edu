@@ -10,13 +10,12 @@ $(".background-trigger").each(function (index) {
             if($(this).children().length > 0) {
                 $(".navbar_background").css("background-color", "#26344f");
                 $("h1").css("color", "#18a0fb");
-                $(".navbar_link").css("color", "#ffffff");
+                // $(".navbar_link").css("color", "#ffffff");
                 $("body").css("color", "#f8f8f8");
                 $(".navbar_brand-divider").css("background-color", "#ffffff");
                 $(".navbar_links-bg").css("background-color", "#26344f");
                 $(".navbar_brand-asfam").css({"-webkit-filter" : "brightness(10)"});
                 $(".navbar_brand-eduqua").attr("src", "https://uploads-ssl.webflow.com/6323f27645f8607e87793e8f/63325fbbbac9a46ca8561c16_eduqua-logo-white.png");
-                $(".navbar_menu-btn-anim").css({"-webkit-filter" : "brightness(10)"});
             }
         },
         onEnterBack: () => {
