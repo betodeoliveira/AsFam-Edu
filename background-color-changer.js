@@ -14,7 +14,7 @@ $(".background-trigger").each(function (index) {
                 $("body").css("color", "#f8f8f8");
                 $(".navbar_brand-divider").css("background-color", "#ffffff");
                 $(".navbar_links-bg").css("background-color", "#26344f");
-                $(".navbar_brand-asfam").css({"-webkit-filter" : "brightness(100)"});
+                $(".navbar_brand-asfam").attr("src", "https://uploads-ssl.webflow.com/6323f27645f8607e87793e8f/63b6e71225a3da01bb41ad3f_logo-simple-white_asfam-schulung-bildung-german.svg");
                 $(".navbar_brand-eduqua").attr("src", "https://uploads-ssl.webflow.com/6323f27645f8607e87793e8f/63325fbbbac9a46ca8561c16_eduqua-logo-white.png");
             }
         },
